@@ -39,21 +39,3 @@ def Unpivot(df, numOfRowHeaders = 1):
             rowCount += 1
 
     return unpivotedDf     
-
-
-def main():
-    sample = r"H:\20180719_LUX_to_Lipper_Formating\20180906_PythonAutomation\BikeShop.csv"
-    liveDataSample = r"H:\20180719_LUX_to_Lipper_Formating\20180906_PythonAutomation\Lipper_Raw__ESL - Table (1).csv"
-    df = pd.DataFrame.from_csv(liveDataSample)
-    numberOfRows = pd.DataFrame(df)
-    try:
-        numberOfRows = Unpivot(df, 9)
-    except:
-        print("Unable to unpivot")
-        return
-    
-    print(numberOfRows)
-        
-    pd.DataFrame.to_csv(numberOfRows, "endSample.csv")
-if __name__ == "__main__":
-    main()

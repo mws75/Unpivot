@@ -15,6 +15,7 @@ def Unpivot(df, numOfRowHeaders = 1):
     #create columns
     listOfColumnNames = list()
     newLilistOfColumnNames = list()
+    another_newListofColumnNames = list()
     for rowHeader in range(numOfRowHeaders):
         columnName = str(df.columns[rowHeader])
         listOfColumnNames.append(columnName)

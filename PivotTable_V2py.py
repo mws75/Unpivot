@@ -15,13 +15,14 @@ def Unpivot(df, numOfRowHeaders = 1):
     #create columns
     listOfColumnNames = list()   
     newBranch_listOfColumns = list()
+    newnewBranch_listOfColumns = list()
 
     for rowHeader in range(numOfRowHeaders):
         columnName = str(df.columns[rowHeader])
         listOfColumnNames.append(columnName)
     listOfColumnNames.append("ColumnTitle")
     listOfColumnNames.append("Value")
-
+    
     unpivotedDf = pd.DataFrame(columns= listOfColumnNames, dtype=str)
 
     rowCount = 0   
